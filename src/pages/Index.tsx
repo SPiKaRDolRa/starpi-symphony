@@ -1,14 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { DashboardLayout } from "@/components/DashboardLayout";
 
-const Index = () => {
+export default function Index() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <DashboardLayout>
+      <div className="fade-in">
+        <h1 className="text-4xl font-bold mb-6">Welcome to Your CMS Dashboard</h1>
+        <p className="text-lg text-muted-foreground mb-8">
+          Manage and view your content from Strapi CMS.
+        </p>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="p-6 bg-primary/5 rounded-lg">
+            <h2 className="font-semibold mb-2">Quick Start</h2>
+            <p className="text-sm text-muted-foreground">
+              Navigate to the Content section to view and manage your Strapi content.
+            </p>
+          </div>
+          <div className="p-6 bg-primary/5 rounded-lg">
+            <h2 className="font-semibold mb-2">Search</h2>
+            <p className="text-sm text-muted-foreground">
+              Use the search feature to quickly find specific content.
+            </p>
+          </div>
+          <div className="p-6 bg-primary/5 rounded-lg">
+            <h2 className="font-semibold mb-2">Settings</h2>
+            <p className="text-sm text-muted-foreground">
+              Configure your dashboard preferences and Strapi connection.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
-};
-
-export default Index;
+}
